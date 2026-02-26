@@ -1,3 +1,5 @@
+package jobsheet3;
+
 import java.util.Scanner;
 public class MahasiswaDemo10 {
     public void inputData() {

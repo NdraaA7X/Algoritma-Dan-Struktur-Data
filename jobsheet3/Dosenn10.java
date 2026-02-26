@@ -1,3 +1,5 @@
+package jobsheet3;
+
 public class Dosenn10 {
     String kode, nama;
     Boolean jenisKelamin;

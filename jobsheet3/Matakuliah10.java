@@ -1,3 +1,5 @@
+package jobsheet3;
+
 public class Matakuliah10 {
     public String kode;
     public String nama;

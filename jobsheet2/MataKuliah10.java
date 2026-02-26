@@ -1,3 +1,5 @@
+package jobsheet2;
+
 public class MataKuliah10 {
     String KodeMK;
     String NamaMK;

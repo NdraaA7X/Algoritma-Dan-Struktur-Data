@@ -1,3 +1,5 @@
+package jobsheet3;
+
 public class DataDosen10 {
 
     public void dataSemuaDosen(Dosenn10[] arrayOfDosen) {

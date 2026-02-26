@@ -1,3 +1,5 @@
+package jobsheet2;
+
 public class MahasiswaMain10 {
     public static void main(String[] args) {
         Mahasiswa10 mhs1 = new Mahasiswa10();

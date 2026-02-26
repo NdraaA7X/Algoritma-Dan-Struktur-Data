@@ -1,3 +1,5 @@
+package jobsheet1;
+
 public class PraktikumFungsi10 {
 
     public static int hitunganPendapatan (int[] stok, int[] harga) {
