@@ -8,9 +8,17 @@ public class Pangkat10 {
         npangkat = p;
     }
 
-    public int PangkatBF(int a, int b) {
+    public int PangkatBF(int a, int n) {
         int hasil = 1;
-        for (int i = 0; i < b; i++) {
+        for (int i = 0; i < n; i++) {
+            hasil = hasil * a;
+        }
+        return hasil;
+    }
+
+    int pnagkatDC(int a, int n) {
+        int hasil = 1;
+        for(int i = 0; i < n; i++) {
             hasil = hasil * a;
         }
         return hasil;
