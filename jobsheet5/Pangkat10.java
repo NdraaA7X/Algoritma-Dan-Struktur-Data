@@ -1,11 +1,11 @@
 package jobsheet5;
 
 public class Pangkat10 {
-    int nilai, npangkat;
+    int nilai, pangkat;
 
     Pangkat10(int n, int p) {
         nilai = n;
-        npangkat = p;
+        pangkat = p;
     }
 
     public int PangkatBF(int a, int n) {
