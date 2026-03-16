@@ -8,7 +8,7 @@ public class Pangkat10 {
         pangkat = p;
     }
 
-    public int PangkatBF(int a, int n) {
+    int PangkatBF(int a, int n) {
         int hasil = 1;
         for (int i = 0; i < n; i++) {
             hasil = hasil * a;
