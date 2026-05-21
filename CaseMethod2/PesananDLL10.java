@@ -24,7 +24,6 @@ public class PesananDLL10 {
     public void tambahPesanan(int kode, String namaPesanan, int harga, String namaPembeli) {
         Pesanan10 p = new Pesanan10(kode, namaPesanan, harga, namaPembeli);
         NodePesanan10 node = new NodePesanan10(p);
-
         if (head == null) {
             head = node;
             tail = node;
@@ -37,7 +36,6 @@ public class PesananDLL10 {
 
     private void sortByNama() {
         if (head == null || head.next == null) return;
-
         NodePesanan10 i = head.next;
         while (i != null) {
             Pesanan10 key = i.data;
@@ -61,19 +59,15 @@ public class PesananDLL10 {
         System.out.println("======================================");
         System.out.println("LAPORAN PESANAN (URUT NAMA PESANAN)");
         System.out.println("======================================");
-        System.out.printf("%-14s %-20s %-10s%n", "Kode Pesanan", "Nama Pesanan", "Harga");
+        System.out.printf("%-14s %-16s %s%n", "Kode Pesanan", "Nama Pesanan", "Harga");
         NodePesanan10 curr = head;
-        int total = 0;
         while (curr != null) {
-            System.out.printf("%-14d %-20s %-10d%n",
+            System.out.printf("%-14d %-16s %d%n",
                 curr.data.kodePesanan,
                 curr.data.namaPesanan,
                 curr.data.harga);
-            total += curr.data.harga;
             curr = curr.next;
         }
-        System.out.println("--------------------------------------");
-        System.out.println("Total Pendapatan : Rp " + total);
     }
 
     public boolean isEmpty() {

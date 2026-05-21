@@ -27,7 +27,6 @@ public class AntrianDLL10 {
         counter++;
         Pembeli10 p = new Pembeli10(counter, nama, noHp);
         NodeAntrian10 node = new NodeAntrian10(p);
-
         if (head == null) {
             head = node;
             tail = node;
@@ -47,10 +46,10 @@ public class AntrianDLL10 {
         System.out.println("==============================");
         System.out.println("Daftar Antrian Pembeli");
         System.out.println("==============================");
-        System.out.printf("%-12s %-15s %-15s%n", "No Antrian", "Nama", "No HP");
+        System.out.printf("%-12s %-16s %s%n", "No Antrian", "Nama", "No HP");
         NodeAntrian10 curr = head;
         while (curr != null) {
-            System.out.printf("%-12d %-15s %-15s%n",
+            System.out.printf("%-12d %-16s %s%n",
                 curr.data.noAntrian,
                 curr.data.namaPembeli,
                 curr.data.noHp);
@@ -58,22 +57,13 @@ public class AntrianDLL10 {
         }
     }
 
-    public String hapusAntrian(int noAntrian) {
-        NodeAntrian10 curr = head;
-        while (curr != null) {
-            if (curr.data.noAntrian == noAntrian) {
-                String nama = curr.data.namaPembeli;
-                if (curr.prev != null) curr.prev.next = curr.next;
-                else head = curr.next;
-
-                if (curr.next != null) curr.next.prev = curr.prev;
-                else tail = curr.prev;
-
-                return nama;
-            }
-            curr = curr.next;
-        }
-        return null;
+    public String hapusHead() {
+        if (head == null) return null;
+        String nama = head.data.namaPembeli;
+        head = head.next;
+        if (head != null) head.prev = null;
+        else tail = null;
+        return nama;
     }
 
     public boolean isEmpty() {

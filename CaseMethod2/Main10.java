@@ -8,7 +8,6 @@ public class Main10 {
         AntrianDLL10 antrian = new AntrianDLL10();
         PesananDLL10 pesanan = new PesananDLL10();
 
-        // Pre-load data dummy pakai konstruktor (sesuai catatan jobsheet)
         antrian.tambahAntrian("Ainra", "08224500000");
         antrian.tambahAntrian("Danra", "08224511111");
         antrian.tambahAntrian("Sanri", "08224522222");
@@ -46,25 +45,15 @@ public class Main10 {
                         System.out.println("Antrian kosong.");
                         break;
                     }
-                    System.out.print("Nomor Antrian yang dipanggil : ");
-                    int noAntrian = sc.nextInt();
-                    sc.nextLine();
-
-                    String namaPembeli = antrian.hapusAntrian(noAntrian);
-                    if (namaPembeli == null) {
-                        System.out.println("Nomor antrian tidak ditemukan.");
-                        break;
-                    }
-
-                    System.out.print("Kode Pesanan  : ");
+                    String namaPembeli = antrian.hapusHead();
+                    System.out.print("Kode Pesanan : ");
                     int kode = sc.nextInt();
                     sc.nextLine();
-                    System.out.print("Nama Pesanan  : ");
+                    System.out.print("Nama Pesanan : ");
                     String namaMakanan = sc.nextLine();
-                    System.out.print("Harga         : ");
+                    System.out.print("Harga        : ");
                     int harga = sc.nextInt();
                     sc.nextLine();
-
                     pesanan.tambahPesanan(kode, namaMakanan, harga, namaPembeli);
                     System.out.println(namaPembeli + " telah memesan " + namaMakanan);
                     break;
