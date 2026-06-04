@@ -22,4 +22,19 @@ public class BinaryTreeArray10 {
             }
         }
     }
+
+    void add(Mahasiswa10 data) {
+        idxLast++;
+        dataMahasiswa[idxLast] = data;
+    }
+ 
+    void traversePreOrder(int idxStart) {
+        if (idxStart <= idxLast) {
+            if (dataMahasiswa[idxStart] != null) {
+                dataMahasiswa[idxStart].tampilInformasi();
+                traversePreOrder(2 * idxStart + 1);
+                traversePreOrder(2 * idxStart + 2);
+            }
+        }
+    }
 }
